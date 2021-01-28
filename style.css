@@ -9,9 +9,25 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 93,75%;
+}
+
 body {
     background: #F0F2F5;
     font-family: 'poppins', sans-serif;
+}
+
+.sr-only {  /*Trick: para deixar o elemento visivel apenas para os leitores de tela*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: react(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .container {
@@ -27,6 +43,20 @@ h2 {
     font-weight: normal;
 }
 
+/* Links E Buttons ================== */
+a {
+    color: #49AA26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3DD705;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
 
 /*Header ===========================*/
 header {
@@ -62,6 +92,10 @@ header {
 .card h3 {
     font-weight: normal;
     font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card p {
@@ -85,6 +119,11 @@ header {
 table thead tr th:first-child,
 table tbody tr td:first-child {
     border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table thead tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
 table thead th {
@@ -128,3 +167,5 @@ footer {
 
     opacity: 0.6;
 }
+
+/* Responsive ==========================*/
